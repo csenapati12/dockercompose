@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+ db:
+  image: mysql
+  ports:
+  - "3306:3306"
+  environment:
+  - MYSQL_ROOT_PASSWORD=testpwd
+  - MYSQL_USER=user
+  - MYSQL_PASSWORD=password
+  - MYSQL_DATABASE=testdb
+ web:
+  image: nginx
+ app:
+  image: python:3.6.8-alpine3.8
+ rabbitmq: 
+  image: rabbitmq:3.7.8-alpine
+  ports:
+  - "8080:15672"
+  
