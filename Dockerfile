@@ -14,7 +14,7 @@ RUN cd /tmp
 RUN curl -O http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.46/bin/apache-tomcat-8.5.46.tar.gz
 RUN mkdir /opt/tomcat
 RUN gzip -V
-RUN tar -xvzf apache-tomcat-8.5.6.tar.gz -C /opt/tomcat --strip-components=1
+RUN tar -xvzf apache-tomcat-8.5.46.tar.gz -C /opt/tomcat --strip-components=1
 RUN cd /opt/tomcat
 RUN chgrp -R tomcat /opt/tomcat
 ADD java-tomcat-maven-example.war /opt/tomcat/webapps
